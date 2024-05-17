@@ -4,4 +4,6 @@ matplotlib
 seaborn
 jupyter
 scikit-learn
+catboost
+xgboost
 -e .
