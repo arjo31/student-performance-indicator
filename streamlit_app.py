@@ -36,7 +36,5 @@ def main():
 
             st.success(f'The predicted maths score is {ceil(results[0])}')
 
-
-
 if __name__=="__main__":
     main()
