@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, url_for
 import numpy as np
 import pandas as pd
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
+from math import ceil
 
 app = Flask(__name__)
 
@@ -30,7 +31,7 @@ def predict_datapoint():
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
 
-        return render_template('home.html', result=results[0])
+        return render_template('home.html', result=ceil(results[0]))
     
 
 if __name__=="__main__":
